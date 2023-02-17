@@ -46,8 +46,6 @@ h1{
   }
   #PP{
     border-radius: 50px;
-    background-color: aqua;
-    padding: 25px;
     margin-left: 10%;
   }
 }
@@ -86,7 +84,7 @@ h1{
       font-size: 1.5rem;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       cursor: pointer;
       width: 80%;
       border-radius: 17px;
@@ -275,6 +273,12 @@ h1{
         .toggle_color_green{
           color: green;
         }
+        .toggle_color_violet{
+          color: blueviolet;
+        }
+        .toggle_color_red{
+          color: red;
+        }
 
         button{
           background-color: #0D0C0C;
@@ -319,6 +323,7 @@ h1{
         .toggle_color_red{
           color: red;
         }
+
       }
     }
 
@@ -453,7 +458,7 @@ h1{
   }
 
 }
-@media (max-width: 320px){
+@media (max-width: 425px){
   #main #left #button1 {
     width: 60%;
   }
@@ -527,5 +532,23 @@ h1{
     height: 35%;
     gap: 10px;
     margin-top: 40%;
+  }
+  #header #welcome {
+    font-size: 1.5rem;
+    display: none;
+  }
+  #header #search_bar {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    width: 20%;
+    border: none;
+    border-radius: 15px;
+    display: none;
+  }
+  #notification {
+    display: none;
   }
 }
