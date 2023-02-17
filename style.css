@@ -11,6 +11,10 @@ body {
   background-color: #000;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 #header {
   width: 100%;
   height: 10vh;
@@ -30,21 +34,28 @@ body {
 }
 #header #search_bar {
   background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 10px;
   width: 20%;
   border: none;
   border-radius: 15px;
 }
+#header #search_bar #input_hide {
+  padding: 1%;
+  border: none;
+}
 #header #PP {
   border-radius: 50px;
   background-color: aqua;
   padding: 25px;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 #main {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,6 +70,11 @@ body {
   text-align: center;
   align-items: center;
 }
+#main #left .logoutalign {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
 #main #left #logout {
   font-size: 1.5rem;
   cursor: pointer;
@@ -71,15 +87,16 @@ body {
 }
 #main #left #button1 {
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   width: 80%;
   border-radius: 17px;
-  padding: 5px;
+  padding: 13px;
+  color: black;
+  font-weight: bold;
   background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
-}
-#main #left #button1:hover {
-  background-color: white;
-  color: #000;
 }
 #main #left #navigation {
   width: 80%;
@@ -90,6 +107,12 @@ body {
   height: 50%;
   list-style-type: none;
   align-items: flex-start;
+  margin-left: 20%;
+}
+#main #left #navigation li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 #main #left #navigation a {
   text-decoration: none;
@@ -104,9 +127,33 @@ body {
   display: flex;
   flex-direction: column;
 }
+#main #center #entract {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
 #main #center #misc_left {
   width: 30%;
   padding: 20px;
+}
+#main #center #misc_left .actual {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#main #center #misc_left .actual .jauné {
+  background-color: #d3d308;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 10px;
+  color: black;
+}
+#main #center #misc_left .misc_somme {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 #main #center #misc_right {
   width: 70%;
@@ -138,46 +185,60 @@ body {
   background-color: rgba(48, 53, 65, 0.6705882353);
   border-radius: 30px;
 }
+#main #center #graph_board .head_graph_right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5%;
+}
+#main #center #graph_board .flechezeh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main #center #graph_board .flechezeh .fleche_adjust {
+  width: 25px;
+  height: auto;
+}
+#main #center #graph_board .case_noir {
+  background-color: #0D0C0C;
+  padding: 5px;
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#main #center #graph_board .case_noir .img_ajust {
+  height: 25px;
+  width: auto;
+}
 #main #center #graph_board #head_graph {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
   height: 15%;
+  align-items: center;
+}
+#main #center #graph_board #head_graph .hebdo_left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #main #center #graph_board #head_graph .case_temp {
   background-color: #0D0C0C;
   padding: 10px;
   border-radius: 5px;
 }
+#main #center #graph_board #head_graph .case_temp .cal_img {
+  height: 20px;
+  width: auto;
+}
 #main #center #graph_board #bot_graph {
   display: flex;
   flex-direction: row;
   height: 85%;
-}
-#main #center #graph_board #bot_graph #graph_left {
-  width: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-#main #center #graph_board #bot_graph #graph_left #abcisses {
-  display: flex;
-  gap: 35px;
-  flex-direction: column;
-  list-style-type: none;
-}
-#main #center #graph_board #bot_graph #graph_right {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-#main #center #graph_board #bot_graph #graph_right #ordonnés {
-  gap: 7%;
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
 }
 #main #center #misctop {
   height: 10%;
@@ -196,7 +257,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 40%;
+  height: 45%;
   border-radius: 30px;
   background-color: rgba(32, 35, 43, 0.6980392157);
   display: flex;
@@ -247,6 +308,9 @@ body {
 #main #right .compo_crypto .orga_crypto_compo .toggle_color {
   color: green;
 }
+#main #right .compo_crypto .orga_crypto_compo .toggle_color_red {
+  color: red;
+}
 #main #right #recentransactions {
   height: 50%;
   display: flex;
@@ -280,6 +344,168 @@ body {
 }
 #main #right #etherium h2 {
   color: #000;
+}
+
+@media (max-width: 1024px) {
+  #main #center {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #main {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #header #search_bar #input_hide {
+    padding: 1%;
+    border: none;
+    width: 100%;
+  }
+  #main #left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+  }
+  #main #left #navigation {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin-left: 0%;
+  }
+  #main #left #button1 {
+    margin-top: 10%;
+    border: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 17px;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
+  }
+  #main #right {
+    width: 90%;
+    height: 100%;
+  }
+  #main #right #bitcoin {
+    margin-bottom: 10px;
+    background-color: coral;
+    height: 25%;
+    border-radius: 30px;
+    background: linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%);
+  }
+  #main #right #etherium {
+    margin-bottom: 10px;
+    background-color: rgba(48, 53, 65, 0.6705882353);
+    height: 25%;
+    border-radius: 30px;
+    background: linear-gradient(99.56deg, #FAFF00 35.82%, #29ABE2 64.75%, rgba(255, 255, 255, 0.7) 91.33%);
+  }
+}
+@media (max-width: 768px) {
+  #main #left #button1 {
+    width: 30%;
+  }
+  #main #center #misctop {
+    height: 20%;
+  }
+  #main #center #recentransac {
+    height: 35%;
+    gap: 10px;
+  }
+}
+@media (max-width: 320px) {
+  #main #left #button1 {
+    width: 60%;
+  }
+  #main #left #navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin: 1rem;
+  }
+  #main #left #navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50%;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin-left: 0%;
+    align-content: flex-start;
+    justify-content: space-around;
+  }
+  #main #center #misctop {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #main #center #misc_right #nav_graph {
+    padding: 4%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background-color: #292727;
+    border-radius: 4px;
+    height: 70%;
+    width: 100%;
+  }
+  #main #center #misc_right {
+    width: 100%;
+  }
+  #main #center #graph_board #head_graph {
+    display: flex;
+    flex-direction: column;
+    padding: 23px;
+    height: 45%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #main #center #graph_board {
+    height: 100%;
+    background-color: rgba(48, 53, 65, 0.6705882353);
+    border-radius: 9px;
+  }
+  #main #center #recentransac .transac_compo {
+    align-items: center;
+    width: 100%;
+    height: 85%;
+    border-radius: 10px;
+    background-color: rgba(32, 35, 43, 0.6980392157);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #main #right {
+    width: 90%;
+    height: 100%;
+    margin-top: 50%;
+  }
+  #main #center #recentransac {
+    height: 35%;
+    gap: 10px;
+    margin-top: 40%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,7 +17,10 @@
         <div id="welcome">
             Hi,Rogers
         </div>
-        <input id="search_bar" placeholder="search">
+        <div id="search_bar">
+            <img src="image/search.svg" alt="icones">
+            <input id="input_hide" placeholder="search">
+        </div>
         <div id="notification">
             <img src="image/notif.svg" alt="notification">
         </div>
@@ -26,24 +29,30 @@
 
     <section class="main" id="main">
         <div id="left">
-            <button id="button1">DashBoard</button>
+                <button id="button1"><img src="image/invoice%20black.svg" alt="icones">DashBoard</button>
             <ul id="navigation">
-                <li><a>Invoices</a></li>
-                <li><a>Clients</a></li>
-                <li><a>Products</a></li>
-                <li><a>Messages</a></li>
-                <li><a>Settings</a></li>
-                <li><a>Help</a></li>
+                <li><img src="image/invoices.svg" alt="icones"><a>Invoices</a></li>
+                <li><img src="image/user.svg" alt="icones"><a>Clients</a></li>
+                <li><img src="image/cado.svg" alt="icones"><a>Products</a></li>
+                <li><img src="image/mail.svg" alt="icones"><a>Messages</a></li>
+                <li><img src="image/settings.svg" alt="icones"><a>Settings</a></li>
+                <li><img src="image/interro.svg" alt="icones"><a>Help</a></li>
             </ul>
 
-            <a id="logout">Log out</a>
+            <div class="logoutalign">
+                <img src="image/log%20out.svg">
+                <a id="logout">Log out</a>
+            </div>
 
         </div>
         <div id="center">
             <h2>Total Balance </h2>
             <div id="misctop">
                 <div id="misc_left">
-                    <p>0.97894652 </p>
+                    <div class="actual">
+                    <p class="misc_somme">0.97894652 </p>
+                        <div class="jauné">BTC</div>
+                    </div>
                     <p>$40,123.56</p>
                 </div>
                 <div id="misc_right">
@@ -62,52 +71,43 @@
             </div>
             <div id="graph_board">
                 <div id="head_graph">
+                    <div class="hebdo_left">
                     <div class="case_temp">1H</div>
                     <div class="case_temp">1D</div>
                     <div class="case_temp">3D</div>
                     <div class="case_temp">1W</div>
-                    <div class="case_temp">1M</div>
-                    <div>
-                        <img src="image/Vector 3.svg" alt="graph 1">
+                    <div class="case_temp"><img src="image/calendrier.svg" alt="calendrier" class="cal_img"></div>
                     </div>
-                    <div>BTC</div>
-                    <img>
-                    <div>ETH</div>
-                </div>
-                <div id="bot_graph">
-                <div id="graph_left">
-                    <ul id="abcisses">
-                        <li>$700</li>
-                        <li>$700</li>
-                        <li>$700</li>
-                        <li>$700</li>
-                        <li>$700</li>
-                        <li>$700</li>
-                        <li>$700</li>
-                    </ul>
+                    <div>
+                    </div>
+                    <div class="head_graph_right">
+                    <div class="case_noir">
+                        <img src="image/bitcoins.svg" class="img_ajust">
+                        BTC
+                        <img src="image/fleche%20bas.svg">
+                    </div>
+                    <div class="flechezeh">
+                        <img src="image/fleche%20droite.svg" class="fleche_adjust">
+                        <img src="image/fleche%20gauche.svg" class="fleche_adjust">
+                    </div>
+                    <div class="case_noir">
+                        <img src="image/Etherium%20icon.svg" class="img_ajust">
+                        ETH
+                        <img src="image/fleche%20bas.svg">
+                    </div>
+                    </div>
+
 
                 </div>
+
                 <div id="graph_right">
-                    <img>
-                    <ul id="ordonnés">
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                        <li>5Nov</li>
-                    </ul>
-
-                </div>
+                    <canvas id="graph"></canvas>
                 </div>
             </div>
-            <h2>Recent Transactions </h2>
+            <div id="entract">
+                <h2>Recent Transactions</h2>
+                <h2>see all coins</h2>
+            </div>
             <div id="recentransac">
                 <div class="transac_compo">
                     <img src="image/bit_orange.svg" alt="logo_btc" class="logo_size">
@@ -150,7 +150,10 @@
 
         </div>
         <div id="right">
-            <h2>Recent Transactions</h2>
+            <div>
+                <h2>Recent Transactions</h2>
+            </div>
+
             <div id="recentransactions">
                 <div class="compo_crypto">
                     <img src="image/Ticons.svg" alt="logo t">
@@ -164,47 +167,47 @@
                     </div>
                 </div>
                 <div class="compo_crypto">
-                    <img src="image/Ticons.svg" alt="logo t">
+                    <img src="image/Group-1.svg" alt="logo G">
                     <div class="orga_crypto_compo">
-                        <h2>Usdt</h2>
-                        <p>recieved</p>
+                        <h2>BNB</h2>
+                        <p>buy</p>
                     </div>
                     <div class="orga_crypto_compo">
-                        <p class="toggle_color">+$3,546</p>
-                        <p>Today,13:45 pm</p>
-                    </div>
-                </div>
-                <div class="compo_crypto">
-                    <img src="image/Ticons.svg" alt="logo t">
-                    <div class="orga_crypto_compo">
-                        <h2>Usdt</h2>
-                        <p>recieved</p>
-                    </div>
-                    <div class="orga_crypto_compo">
-                        <p class="toggle_color">+$3,546</p>
-                        <p>Today,13:45 pm</p>
+                        <p class="toggle_color">+$0,7546</p>
+                        <p>Today,5:45 pm</p>
                     </div>
                 </div>
                 <div class="compo_crypto">
-                    <img src="image/Ticons.svg" alt="logo t">
+                    <img src="image/lite.svg" alt="logo t">
                     <div class="orga_crypto_compo">
-                        <h2>Usdt</h2>
-                        <p>recieved</p>
+                        <h2>Lite Coins</h2>
+                        <p>withdrawal</p>
                     </div>
                     <div class="orga_crypto_compo">
-                        <p class="toggle_color">+$3,546</p>
-                        <p>Today,13:45 pm</p>
+                        <p class="toggle_color_red">+$0,7446</p>
+                        <p>Today,7:55 pm</p>
                     </div>
                 </div>
                 <div class="compo_crypto">
-                    <img src="image/Ticons.svg" alt="logo t">
+                    <img src="image/bit_orange.svg" alt="logo t">
                     <div class="orga_crypto_compo">
-                        <h2>Usdt</h2>
+                        <h2>bitcoin</h2>
                         <p>recieved</p>
                     </div>
                     <div class="orga_crypto_compo">
-                        <p class="toggle_color">+$3,546</p>
-                        <p>Today,13:45 pm</p>
+                        <p class="toggle_color">+$2,546</p>
+                        <p>Today,8:55 pm</p>
+                    </div>
+                </div>
+                <div class="compo_crypto">
+                    <img src="image/Etherium%20icon.svg" alt="logo t">
+                    <div class="orga_crypto_compo">
+                        <h2>Etherum</h2>
+                        <p>recieved</p>
+                    </div>
+                    <div class="orga_crypto_compo">
+                        <p class="toggle_color">+$1,546</p>
+                        <p>Today,10:02 pm</p>
                     </div>
                 </div>
 
@@ -212,7 +215,7 @@
             <h2>Assets</h2>
             <div id="bitcoin" class="flashcoins">
                 <div>
-                    <img src="image/bit_orange.svg" alt="icons_bitcoins">
+                    <img src="image/bitcoins%20.svg" alt="icons_bitcoins">
                     <p>Bitcoin</p>
                     <h2>121,6450.45</h2>
                 </div>
@@ -234,6 +237,8 @@
 
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="Main.js"></script>
 
 
 </body>
