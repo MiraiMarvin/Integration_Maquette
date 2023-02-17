@@ -1,0 +1,285 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #000;
+}
+
+#header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+}
+#header #logo {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+#header #welcome {
+  font-size: 1.5rem;
+}
+#header #search_bar {
+  background-color: #FFF;
+  padding: 10px;
+  width: 20%;
+  border: none;
+  border-radius: 15px;
+}
+#header #PP {
+  border-radius: 50px;
+  background-color: aqua;
+  padding: 25px;
+  margin-left: 20%;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+#main #left {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+#main #left #logout {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 8.5rem;
+  width: 80%;
+}
+#main #left #logout:hover {
+  background-color: white;
+  color: #000;
+}
+#main #left #button1 {
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 80%;
+  border-radius: 17px;
+  padding: 5px;
+  background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
+}
+#main #left #button1:hover {
+  background-color: white;
+  color: #000;
+}
+#main #left #navigation {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+  list-style-type: none;
+  align-items: flex-start;
+}
+#main #left #navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding-top: 1rem;
+}
+#main #center {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#main #center #misc_left {
+  width: 30%;
+  padding: 20px;
+}
+#main #center #misc_right {
+  width: 70%;
+}
+#main #center #misc_right #nav_graph {
+  padding: 3%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #292727;
+  border-radius: 15px;
+  height: 60%;
+  width: 60%;
+}
+#main #center #misc_right #nav_graph ul {
+  width: 100%;
+  gap: 10px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+#main #center #misc_right #nav_graph ul .active {
+  background-color: #0D0C0C;
+  border-radius: 5px;
+  padding: 5px;
+}
+#main #center #graph_board {
+  height: 65%;
+  background-color: rgba(48, 53, 65, 0.6705882353);
+  border-radius: 30px;
+}
+#main #center #graph_board #head_graph {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  height: 15%;
+}
+#main #center #graph_board #head_graph .case_temp {
+  background-color: #0D0C0C;
+  padding: 10px;
+  border-radius: 5px;
+}
+#main #center #graph_board #bot_graph {
+  display: flex;
+  flex-direction: row;
+  height: 85%;
+}
+#main #center #graph_board #bot_graph #graph_left {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#main #center #graph_board #bot_graph #graph_left #abcisses {
+  display: flex;
+  gap: 35px;
+  flex-direction: column;
+  list-style-type: none;
+}
+#main #center #graph_board #bot_graph #graph_right {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+#main #center #graph_board #bot_graph #graph_right #ordonnés {
+  gap: 7%;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+#main #center #misctop {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#main #center #recentransac {
+  height: 25%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+}
+#main #center #recentransac .transac_compo {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  border-radius: 30px;
+  background-color: rgba(32, 35, 43, 0.6980392157);
+  display: flex;
+  flex-direction: row;
+}
+#main #center #recentransac .transac_compo .toggle_color_blue {
+  color: #1970D6;
+}
+#main #center #recentransac .transac_compo .toggle_color_green {
+  color: green;
+}
+#main #center #recentransac .transac_compo button {
+  background-color: #0D0C0C;
+  border-radius: 15px;
+  border: none;
+  color: #FFFFFF;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#main #center #recentransac .transac_compo .logo_size {
+  height: 40%;
+  width: auto;
+}
+#main #center #recentransac .transac_compo .img_icons {
+  height: 20%;
+  width: auto;
+}
+#main #center h2 {
+  font-weight: 900;
+  font-size: 18px;
+  padding: 10px;
+}
+#main #right {
+  width: 25%;
+  height: 100%;
+}
+#main #right .compo_crypto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#main #right .compo_crypto .orga_crypto_compo {
+  display: flex;
+  flex-direction: column;
+}
+#main #right .compo_crypto .orga_crypto_compo .toggle_color {
+  color: green;
+}
+#main #right #recentransactions {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#main #right .flashcoins {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 5%;
+}
+#main #right #bitcoin {
+  margin-bottom: 10px;
+  background-color: coral;
+  height: 20%;
+  border-radius: 30px;
+  background: linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%);
+}
+#main #right #etherium {
+  margin-bottom: 10px;
+  background-color: rgba(48, 53, 65, 0.6705882353);
+  height: 20%;
+  border-radius: 30px;
+  background: linear-gradient(99.56deg, #FAFF00 35.82%, #29ABE2 64.75%, rgba(255, 255, 255, 0.7) 91.33%);
+}
+#main #right #etherium p {
+  color: #000;
+}
+#main #right #etherium h2 {
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */
